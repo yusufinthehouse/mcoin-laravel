@@ -16,12 +16,4 @@ class User extends Model {
     public $timestamps = false;
     protected $fillable = ['email', 'password', 'full_name', 'birth_date', 'photo'];
     
-    public function getUserById($id) {
-        $package = DB::table('packages')
-                ->where('id', $id)
-                ->first();
-
-        return $package;
-    }
-
 }
